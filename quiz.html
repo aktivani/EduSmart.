@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSmart Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="EduSmart Logo">
+                <h1>EduSmart Quiz</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#materials">Study Materials</a></li>
+                </ul>
+            </nav>
+            <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <div id="quiz-intro">
+            <h2>Test Your Knowledge</h2>
+            <p>Select a quiz category to begin:</p>
+            <div class="quiz-categories">
+                <button data-category="math">Mathematics</button>
+                <button data-category="science">Science</button>
+                <button data-category="general">General Knowledge</button>
+            </div>
+        </div>
+
+        <div id="quiz-area" style="display:none;">
+            <div class="quiz-progress">
+                <span id="question-counter">Question 1/5</span>
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div id="question-container">
+                <h2 id="question">Question text goes here</h2>
+                <div id="options" class="options-grid"></div>
+            </div>
+            <button id="next-btn" class="quiz-button">Next Question</button>
+        </div>
+
+        <div id="results" style="display:none;">
+            <h2>Quiz Results</h2>
+            <p id="score">You scored 3 out of 5</p>
+            <div id="feedback"></div>
+            <button id="restart-btn" class="quiz-button">Take Another Quiz</button>
+        </div>
+    </main>
+
+    <script src="js/quiz.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
